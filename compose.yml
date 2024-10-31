@@ -1,0 +1,20 @@
+services:
+  clasp:
+    image: node:lts
+    restart: always
+    security_opt:
+      - no-new-privileges:true
+    user: node
+    working_dir: /home/node/try
+    environment:
+      TZ: Asia/Tokyo
+#      DATABASE_URL: postgresql://appuser:${PGPASS}@db/appdb
+    volumes:
+      - .:/home/node/try
+      - ~/.ssh:/home/node/.ssh
+      - ~/.clasprc.json:/home/node/.clasprc.json
+    ports:
+      - 3000:3000
+      - 5173:5173
+#    entrypoint: ["/home/node/${APP_NAME}/docker-entrypoint.sh"]
+    command: ["tail", "-f", "/dev/null"]
