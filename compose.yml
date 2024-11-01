@@ -12,6 +12,7 @@ services:
     volumes:
       - .:/home/node/try
       - ~/.ssh:/home/node/.ssh
+      - ~/.gitconfig:/home/node/.gitconfig
       - ~/.clasprc.json:/home/node/.clasprc.json
     ports:
       - 3000:3000
