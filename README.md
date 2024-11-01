@@ -1,7 +1,9 @@
 # package.json
 
+`-g` を使わずにインストールするので、claspコマンドは `npx clasp login` などとして実行する。
+
 ```
-npm install @google/clasp @dagrejs/graphlib
+npm install @google/clasp
 npm install -D vite typescript rollup-plugin-google-apps-script @types/node @rollup/plugin-typescript @types/google-apps-script
 ```
 
@@ -18,6 +20,8 @@ npm install -D vite typescript rollup-plugin-google-apps-script @types/node @rol
 ```
 
 # vite.config.ts
+
+https://github.com/mato533/rollup-plugin-gas の `README.md` をそのまま使っている。
 
 `rollupPluginGas` を指定している以外に特記事項なし。
 
